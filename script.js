@@ -67,7 +67,7 @@ const para = document.createElement("div");
 // para.classList.add("land_p_div");
  para.id = "paragr";
 
-para.innerHTML = "Discover the art and soul of clay with over <strong>40 years of professional experience</strong> in the craft. Our website is your gateway to exploring exquisite handmade pottery, where tradition meets innovation.";
+para.innerHTML = "Fedezd fel a kerámia művészetét és lelkét több mint <strong>40 éves szakmai tapasztalattal</strong> a mesterségben. Weboldalunk kapu a gyönyörű kézműves kerámiák felfedezéséhez, ahol a hagyomány találkozik az innovációval.";
 // para.style.opacity = "1";
 
 
@@ -90,7 +90,7 @@ landimage2.setAttribute('data-large', './Vazak/75456910_2470032499719263_1282600
 const para2 = document.createElement("div");
  // para2.id = "paragr2";
 // para2.classList.add("land_p_div");
-para2.innerHTML = "Whether you're a seasoned artist, an aspiring potter, or simply a lover of beautiful ceramics, we invite you to delve into our collection, workshops, and stories. Let's shape beauty together!";
+para2.innerHTML = "Legyél akár tapasztalt művész, feltörekvő fazekas vagy egyszerűen csak a gyönyörű kerámiák szerelmese, meghívunk, hogy merülj el gyűjteményünkben és történeteinkben. Formáljuk együtt a szépséget!";
 // para.style.opacity = "1";
 
 landp.appendChild(para);
@@ -140,7 +140,7 @@ homebutton.addEventListener('click', function() {
   setTimeout(() => {
       homeheadhome.style.opacity = "1";
       homeheadhome.style.transform = 'translateX(0%)';
-          homeheadhome.innerHTML = "HOME";
+          homeheadhome.innerHTML = "Főoldal";
   }, 1000);
 
      const productDivs = document.querySelector('#productdiv');
@@ -553,7 +553,7 @@ home_anim.forEach((item, index) => {
   setTimeout(() => {
       homeheadprod.style.opacity = "1";
       homeheadprod.style.transform = 'translateX(0%)';
-        homeheadprod.innerHTML = "Our Products";
+        homeheadprod.innerHTML = "Termékeink";
   }, 1000);
 
  if(contactprod){
@@ -674,7 +674,7 @@ nameGroup.classList.add("form-group");
 
 const nameLabel = document.createElement('label');
 // nameLabel.setAttribute('name', 'name');
-nameLabel.textContent = 'Name:';
+nameLabel.textContent = 'Név:';
 
 if(window.innerWidth <= 710){
 nameLabel.style.fontSize = "14px";
@@ -698,6 +698,13 @@ if(window.innerWidth <= 710){
 nameInput.style.width = "200px";
 }
 
+nameInput.addEventListener('invalid', function() {
+    nameInput.setCustomValidity("Kérlek írd be a teljes neved");
+});
+
+nameInput.addEventListener('input', function() {
+    nameInput.setCustomValidity(""); // Clear the custom message
+});
 
 nameGroup.appendChild(nameInput);
 
@@ -733,6 +740,14 @@ if(window.innerWidth <= 710){
 emailInput.style.width = "200px";
 }
 
+emailInput.addEventListener('invalid', function() {
+    emailInput.setCustomValidity("Kérlek írd be az email címed");
+});
+
+emailInput.addEventListener('input', function() {
+    emailInput.setCustomValidity(""); // Clear the custom message
+});
+
 emailGroup.appendChild(emailInput);
 
 form.appendChild(emailGroup);
@@ -742,7 +757,7 @@ messageGroup.className = 'form-group';
 
 const messageLabel = document.createElement('label');
 // messageLabel.setAttribute('name', 'message');
-messageLabel.textContent = 'Message:';
+messageLabel.textContent = 'Üzenet:';
 
 if(window.innerWidth <= 710){
 messageLabel.style.fontSize = "14px";
@@ -768,6 +783,14 @@ messageTextarea.style.width = "200px";
 messageTextarea.style.fontSize = "14px";
 }
 
+messageTextarea.addEventListener('invalid', function() {
+    messageTextarea.setCustomValidity("Kérlek írj üzenetet");
+});
+
+messageTextarea.addEventListener('input', function() {
+    messageTextarea.setCustomValidity(""); // Clear the custom message
+});
+
 messageGroup.appendChild(messageTextarea);
 
 form.appendChild(messageGroup);
@@ -776,7 +799,7 @@ const submitButton = document.createElement('button');
 submitButton.id = 'senbut';
 submitButton.className = 'form-group';
 submitButton.type = 'submit';
-submitButton.textContent = 'Send Message';
+submitButton.textContent = 'Küldés';
 form.appendChild(submitButton);
 
          contactdiv.appendChild(form);
@@ -807,7 +830,7 @@ contactbut.addEventListener('click', () => {
   setTimeout(() => {
       homeheadcontact.style.opacity = "1";
       homeheadcontact.style.transform = 'translateX(0%)';
-              homeheadcontact.innerHTML = "Contact Us";
+              homeheadcontact.innerHTML = "Kapcsolat";
   }, 1000);
 
 
