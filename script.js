@@ -377,7 +377,7 @@ let imageSources = {
     },
     product18: {
         path: "./Thumbs/prod_thumb18.jpg",
-        attribute: './Vazak/77259990_2470023776386802_2088527374957150208_n.jpg' // Replace with your desired attribute
+        attribute: './Vazak/77103146_2470024846386695_2221387871816777728_n.jpg' // Replace with your desired attribute
     },
     product19: {
         path: "./Thumbs/prod_thumb19.jpg",
