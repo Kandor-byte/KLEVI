@@ -698,6 +698,8 @@ if(window.innerWidth <= 710){
 nameInput.style.width = "200px";
 }
 
+nameInput.placeholder = "Írd be a Teljes Neved ...";
+
 nameInput.addEventListener('invalid', function() {
     nameInput.setCustomValidity("Kérlek írd be a teljes neved");
 });
@@ -739,6 +741,9 @@ emailInput.style.width = "300px";
 if(window.innerWidth <= 710){
 emailInput.style.width = "200px";
 }
+
+emailInput.placeholder = "Írd be az email címed ...";
+
 
 emailInput.addEventListener('invalid', function() {
     emailInput.setCustomValidity("Kérlek írd be az email címed");
@@ -782,6 +787,9 @@ if(window.innerWidth <= 710){
 messageTextarea.style.width = "200px";
 messageTextarea.style.fontSize = "14px";
 }
+
+messageTextarea.placeholder = "Írj Üzenetet ...";
+
 
 messageTextarea.addEventListener('invalid', function() {
     messageTextarea.setCustomValidity("Kérlek írj üzenetet");
