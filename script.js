@@ -88,9 +88,9 @@ landimage2.setAttribute('data-large', './Vazak/75456910_2470032499719263_1282600
 // landimage.style.opacity = "1";
 
 const para2 = document.createElement("div");
- // para2.id = "paragr2";
+  para2.id = "paragr2";
 // para2.classList.add("land_p_div");
-para2.innerHTML = "Legyél akár tapasztalt művész, feltörekvő fazekas vagy egyszerűen csak a gyönyörű kerámiák szerelmese, meghívunk, hogy merülj el gyűjteményünkben és történeteinkben. Formáljuk együtt a szépséget!";
+para2.innerHTML = "Legyél akár tapasztalt művész, feltörekvő fazekas vagy egyszerűen csak a gyönyörű kerámiák szerelmese. Merülj el gyűjteményünkben és történeteinkben. Formáljuk együtt a szépséget!";
 // para.style.opacity = "1";
 
 landp.appendChild(para);

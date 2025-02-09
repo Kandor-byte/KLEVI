@@ -453,9 +453,9 @@ label {
     }
 
     #L {
-        font-size: 25px;
+        font-size: 30px;
         left: -15px;
-        bottom: -5px;
+        bottom: -10px;
     }
 }
 
@@ -482,13 +482,13 @@ label {
     }
 
     #K {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #L {
-        font-size: 15px;
+        font-size: 25px;
         left: -10px;
-        bottom: -5px;
+        bottom: -10px;
     }
 
     .land {
@@ -558,6 +558,20 @@ label {
 
     #homehead {
         font-size: 20px;
+    }
+
+        #K {
+        font-size: 25px;
+    }
+
+    #L {
+        font-size: 25px;
+        left: -10px;
+        bottom: -10px;
+    }
+
+    #landing {
+    margin-top: 5px;
     }
 
     .land {
