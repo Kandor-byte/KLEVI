@@ -117,6 +117,12 @@ const homeheadhome = document.querySelector("#homehead");
 
 homebutton.addEventListener('click', function() {
 
+        if(window.innerWidth <= 1024){
+
+hamburgclose();
+
+    }
+
            const contacthome = document.querySelector("#contact");
 
             if(contacthome){
@@ -536,6 +542,12 @@ const homeheadprod = document.querySelector("#homehead");
 
    landbutton.addEventListener('click', function() {
 
+    if(window.innerWidth <= 1024){
+
+hamburgclose();
+
+    }
+
        const contactprod = document.querySelector("#contact");
 
 home_anim.forEach((item, index) => {
@@ -676,10 +688,6 @@ const nameLabel = document.createElement('label');
 // nameLabel.setAttribute('name', 'name');
 nameLabel.textContent = 'Név:';
 
-if(window.innerWidth <= 710){
-nameLabel.style.fontSize = "14px";
-}
-
 nameGroup.appendChild(nameLabel);
 
 const nameInput = document.createElement('input');
@@ -689,14 +697,6 @@ nameInput.id = 'name';
 nameInput.name = "name";
 nameInput.required = true;
 nameInput.style.width = "400px";
-
-if(window.innerWidth <= 1024){
-nameInput.style.width = "300px";
-}
-
-if(window.innerWidth <= 710){
-nameInput.style.width = "200px";
-}
 
 nameInput.placeholder = "Írd be a Teljes Neved ...";
 
@@ -719,10 +719,6 @@ const emailLabel = document.createElement('label');
 // emailLabel.setAttribute('name', 'email');
 emailLabel.textContent = 'email:';
 
-if(window.innerWidth <= 710){
-emailLabel.style.fontSize = "14px";
-}
-
 emailGroup.appendChild(emailLabel);
 
 const emailInput = document.createElement('input');
@@ -732,15 +728,6 @@ emailInput.id = 'email';
 emailInput.name = "email";
 emailInput.required = true;
 emailInput.style.width = "400px";
-
-if(window.innerWidth <= 1024){
-emailInput.style.width = "300px";
-}
-
-
-if(window.innerWidth <= 710){
-emailInput.style.width = "200px";
-}
 
 emailInput.placeholder = "Írd be az email címed ...";
 
@@ -764,10 +751,6 @@ const messageLabel = document.createElement('label');
 // messageLabel.setAttribute('name', 'message');
 messageLabel.textContent = 'Üzenet:';
 
-if(window.innerWidth <= 710){
-messageLabel.style.fontSize = "14px";
-}
-
 messageGroup.appendChild(messageLabel);
 
 const messageTextarea = document.createElement('textarea');
@@ -780,10 +763,17 @@ messageTextarea.style.width = "400px";
 messageTextarea.style.height = "200px";
 
 if(window.innerWidth <= 1024){
+    emailInput.style.width = "300px";
+    nameInput.style.width = "300px";
 messageTextarea.style.width = "300px";
 }
 
 if(window.innerWidth <= 710){
+    messageLabel.style.fontSize = "14px";
+    emailInput.style.width = "200px";
+    emailLabel.style.fontSize = "14px";
+    nameInput.style.width = "200px";
+    nameLabel.style.fontSize = "14px";
 messageTextarea.style.width = "200px";
 messageTextarea.style.fontSize = "14px";
 }
@@ -817,6 +807,12 @@ form.appendChild(submitButton);
  const home_animcontact = document.querySelectorAll('.land');
 
 contactbut.addEventListener('click', () => {
+
+    if(window.innerWidth <= 1024){
+
+hamburgclose();
+
+    }
 
      const productDivscont = document.querySelector('#productdiv');
 
@@ -1014,7 +1010,7 @@ swnavlinkschild.forEach((item, index) => {
 swnavbar.appendChild(hamburg);
      }
 
-     } else  if (window.innerWidth >= 1024) {
+     } else if (window.innerWidth >= 1024) {
 
                  swnavlinks.style.display = "flex";
          swnavlinks.style.flexDirection = 'row';
@@ -1027,3 +1023,30 @@ swnavbar.appendChild(hamburg);
          swnavbar.removeChild(hamburg);
     }
 };
+
+              function hamburgclose(){
+                           const swnavlinks2 = document.querySelector(".nav-links");
+    const swnavlinkschild2 = swnavlinks2.querySelectorAll("*");
+
+        const hamburg2 = document.querySelector('#hamburg');
+
+        const topbar2 = hamburg2.children[0];
+    const midbar2 = hamburg2.children[1];
+    const botbar2 = hamburg2.children[2];
+
+     topbar2.style.transform = 'rotate(0deg) translate(0px, 0px)';
+    midbar2.style.opacity = '1';
+    botbar2.style.transform = 'rotate(0deg) translate(0px, 0px)';
+
+         swnavlinks2.style.maxHeight = "0";
+
+        swnavlinkschild2.forEach((item, index) => {
+              setTimeout(() => {
+            item.style.opacity = "0";
+              }, index * 300);
+        });
+
+              setTimeout(() => {
+        swnavlinks2.style.display = "none";
+              }, 901);
+            }
