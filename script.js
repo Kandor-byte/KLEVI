@@ -205,6 +205,19 @@ function light(elem1){
 const largeImage = document.createElement("img");
 const closeButton = document.createElement("span");
 const nav = document.querySelector("#nav-cont");
+const closetextdiv =  document.createElement("div");
+const closetextpara = document.createElement("p");
+const closetext = closetextpara.innerText = "Kattints a Bezáráshoz";
+closetextdiv.innerHTML = closetext;
+        closetextdiv.style.color = "white";
+        closetextdiv.style.fontSize = "20px";
+           if(window.innerWidth <= 710){
+            closetextdiv.style.fontSize = "15px";
+        }
+        closetextdiv.style.margin = "15px";
+        lightbox.style.display = "flex";
+        lightbox.style.flexDirection = "column";
+// closetextdiv.style.setProperty('flex-direction', 'column');
 
 lightbox.id = 'lightbox';
 
@@ -222,6 +235,7 @@ largeImage.id = 'largeImage';
             setTimeout(() => {
            nav.style.display = "none";
             }, 500);
+        lightbox.appendChild(closetextdiv);
         lightbox.appendChild(closeButton);
         lightbox.appendChild(largeImage);
         document.body.appendChild(lightbox);
@@ -262,7 +276,7 @@ closeButton.addEventListener('click', function() {
 
 // Close lightbox when clicking outside of the image
 lightbox.addEventListener('click', function(event) {
-    if (event.target === lightbox || event.target === largeImage) {
+    if (event.target === lightbox || event.target === largeImage || event.target === closetextdiv) {
         closeButton.click();
     }
 });
@@ -1049,4 +1063,4 @@ swnavbar.appendChild(hamburg);
               setTimeout(() => {
         swnavlinks2.style.display = "none";
               }, 901);
-            }
+};
